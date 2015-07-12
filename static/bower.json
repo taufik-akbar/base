@@ -1,8 +1,7 @@
 {
-  "name": "taufik-base",
-  "version": "1.0",
+  "name": "dev-template",
+  "version": "1.0.0",
   "dependencies": {
-    "foundation": "latest",
-    "fontawesome": "~4.3.0"
+    "foundation": "zurb/bower-foundation"
   }
 }

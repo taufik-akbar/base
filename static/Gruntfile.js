@@ -39,25 +39,25 @@ module.exports = function(grunt) {
         src: [
           foundationJsVendorPath+'jquery.js',
           foundationJsPrefix + 'js',
-          // foundationJsPrefix + 'abide.js',
-          // foundationJsPrefix + 'accordion.js',
+          foundationJsPrefix + 'abide.js',
+          foundationJsPrefix + 'accordion.js',
           foundationJsPrefix + 'aleart.js',
           foundationJsPrefix + 'clearing.js',
-          // foundationJsPrefix + 'dropdown.js',
-          // foundationJsPrefix + 'equalizer.js',
+          foundationJsPrefix + 'dropdown.js',
+          foundationJsPrefix + 'equalizer.js',
           foundationJsPrefix + 'interchange.js',
-          // foundationJsPrefix + 'joyride.js',
-          // foundationJsPrefix + 'magellan.js',
-          // foundationJsPrefix + 'offcanvas.js',
-          // foundationJsPrefix + 'orbit.js',
+          foundationJsPrefix + 'joyride.js',
+          foundationJsPrefix + 'magellan.js',
+          foundationJsPrefix + 'offcanvas.js',
+          foundationJsPrefix + 'orbit.js',
           foundationJsPrefix + 'reveal.js',
-          // foundationJsPrefix + 'slider.js',
+          foundationJsPrefix + 'slider.js',
           foundationJsPrefix + 'tab.js',
-          // foundationJsPrefix + 'tooltip.js',
+          foundationJsPrefix + 'tooltip.js',
           foundationJsPrefix + 'topbar.js',
 
 
-          //my script
+          //your script
           // 'src/js/     
         ],
           
