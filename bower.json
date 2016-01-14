@@ -1,8 +1,8 @@
 {
 	"name": "definite-frontend-base",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"authors": [
 		"Taufik Akbar Hidayat <taufik@definite.co.id>"
 	],
-	"description": "Foundation LIBSASS, Grunt : SASS, WATCH, CONCAT, UGLIFY"
+	"description": "Foundation 6 LIBSASS, Font Awesome SCSS, Grunt : SASS, WATCH, CONCAT, UGLIFY"
 }

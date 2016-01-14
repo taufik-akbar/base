@@ -1,8 +1,8 @@
-var foundationBasePath = 'bower_components/foundation/',
-    foundationScssPath = foundationBasePath+'scss/',
-    foundationJsPath = foundationBasePath+'js/',
-    foundationJsVendorPath = foundationJsPath+'vendor/'
-    foundationJsPrefix = foundationJsPath+'foundation/foundation.';
+var foundationBasePath =      'bower_components/foundation-sites/',
+    foundationScssPath =      foundationBasePath+'scss/',
+    bowerPath =               'bower_components/',
+    foundationJsVendorPath =  bowerPath+'jquery/dist/',
+    foundationJsPrefix =      foundationBasePath+'js/foundation.';
 
 module.exports = function(grunt) {
   grunt.initConfig({
@@ -37,25 +37,29 @@ module.exports = function(grunt) {
       },
       vendor: {
         src: [
-          foundationJsVendorPath+'jquery.js',
+          foundationJsVendorPath + 'jquery.js',
           foundationJsPrefix + 'js',
-          foundationJsPrefix + 'abide.js',
+          foundationJsPrefix + 'util.*.js',
+          // Paths to individual JS components defined below
+          foundationJsPrefix + 'js',
           foundationJsPrefix + 'accordion.js',
-          foundationJsPrefix + 'aleart.js',
-          foundationJsPrefix + 'clearing.js',
+          foundationJsPrefix + 'accordionMenu.js',
+          foundationJsPrefix + 'drilldown.js',
           foundationJsPrefix + 'dropdown.js',
+          foundationJsPrefix + 'dropdownMenu.js',
           foundationJsPrefix + 'equalizer.js',
           foundationJsPrefix + 'interchange.js',
-          foundationJsPrefix + 'joyride.js',
           foundationJsPrefix + 'magellan.js',
           foundationJsPrefix + 'offcanvas.js',
           foundationJsPrefix + 'orbit.js',
+          foundationJsPrefix + 'responsiveMenu.js',
+          foundationJsPrefix + 'responsiveToggle.js',
           foundationJsPrefix + 'reveal.js',
           foundationJsPrefix + 'slider.js',
-          foundationJsPrefix + 'tab.js',
-          foundationJsPrefix + 'tooltip.js',
-          foundationJsPrefix + 'topbar.js',
-
+          foundationJsPrefix + 'sticky.js',
+          foundationJsPrefix + 'tabs.js',
+          foundationJsPrefix + 'toggler.js',
+          foundationJsPrefix + 'tooltip.js'
 
           //your script
           // 'src/js/     
