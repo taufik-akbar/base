@@ -38,10 +38,9 @@ module.exports = function(grunt) {
       vendor: {
         src: [
           foundationJsVendorPath + 'jquery.js',
-          foundationJsPrefix + 'js',
+          foundationJsPrefix + 'core.js',
           foundationJsPrefix + 'util.*.js',
           // Paths to individual JS components defined below
-          foundationJsPrefix + 'js',
           foundationJsPrefix + 'accordion.js',
           foundationJsPrefix + 'accordionMenu.js',
           foundationJsPrefix + 'drilldown.js',
