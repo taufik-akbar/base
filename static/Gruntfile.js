@@ -37,10 +37,10 @@ module.exports = function(grunt) {
       },
       vendor: {
         src: [
-          foundationJsVendorPath + 'jquery.js',
+          foundationJsVendorPath + 'jquery.min.js',
           foundationJsPrefix + 'core.js',
           foundationJsPrefix + 'util.*.js',
-          // Paths to individual JS components defined below
+          Paths to individual JS components defined below
           foundationJsPrefix + 'accordion.js',
           foundationJsPrefix + 'accordionMenu.js',
           foundationJsPrefix + 'drilldown.js',
@@ -61,9 +61,8 @@ module.exports = function(grunt) {
           foundationJsPrefix + 'tooltip.js'
 
           //your script
-          // 'src/js/     
         ],
-          
+
         dest: 'js/app.js'
       }
     },
@@ -78,7 +77,7 @@ module.exports = function(grunt) {
         }
       }
     },
-    
+
     watch: {
       grunt: {
         files: ['Gruntfile.js'],
