@@ -14,18 +14,11 @@ module.exports = function(grunt) {
       },
       dist: {
         options: {
-          outputStyle: 'compressed'
+          outputStyle: 'compressed',
+          sourceMap: true
         },
         files: {
           'css/app.min.css': 'src/scss/app.scss'
-        }
-      },
-      dev: {
-        options: {
-          outputStyle: 'nested'
-        },
-        files: {
-          'css/app.css': 'src/scss/app.scss'
         }
       }
     },
@@ -40,8 +33,9 @@ module.exports = function(grunt) {
           foundationJsVendorPath + 'jquery.min.js',
           foundationJsPrefix + 'core.js',
           foundationJsPrefix + 'util.*.js',
-          Paths to individual JS components defined below
+          // Paths to individual JS components defined below
           foundationJsPrefix + 'accordion.js',
+          foundationJsPrefix + 'abide.js',
           foundationJsPrefix + 'accordionMenu.js',
           foundationJsPrefix + 'drilldown.js',
           foundationJsPrefix + 'dropdown.js',
@@ -58,7 +52,8 @@ module.exports = function(grunt) {
           foundationJsPrefix + 'sticky.js',
           foundationJsPrefix + 'tabs.js',
           foundationJsPrefix + 'toggler.js',
-          foundationJsPrefix + 'tooltip.js'
+          foundationJsPrefix + 'tooltip.js',
+          foundationJsPrefix + 'zf.responsiveAccordionTabs.js'
 
           //your script
         ],
@@ -73,7 +68,15 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'js/app.min.js':['js/app.js']
+          'js/app.min.js':['js/app.babeled.js']
+        }
+      }
+    },
+
+    babel: {
+      dist: {
+        files: {
+          'js/app.babeled.js': 'js/app.js'
         }
       }
     },
@@ -98,10 +101,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-babel');
 
-  grunt.registerTask('development-task', ['sass:dev','concat:vendor']);
-  grunt.registerTask('production-task', ['sass:dist','uglify']);
+  grunt.registerTask('development-task', ['sass:dist','concat:vendor', 'babel', 'uglify']);
 
-  grunt.registerTask('build', ['production-task']);
   grunt.registerTask('default', ['development-task','watch']);
 }
